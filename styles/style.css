@@ -53,6 +53,16 @@ ol {
   background-color: #d9d9d9;
 }
 
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .content {
   display: flex;
   flex-direction: row;
@@ -60,42 +70,6 @@ ol {
   align-items: end;
   gap: 30px;
   width: 1140px;
-}
-
-.content__list-container {
-  position: relative;
-  height: 298px;
-  padding-top: 5px;
-  padding-right: 5px;
-  overflow: auto;
-}
-
-.content__list {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  margin-bottom: 30px;
-}
-
-.content__list-item {
-  padding: 3px;
-}
-
-.content__details {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  height: 100%;
-}
-
-.title {
-  color: #fff;
-  font-family: "Oswald", sans-serif;
-  font-weight: 700;
-  font-size: 75px;
-  line-height: 94%;
-  text-transform: uppercase;
 }
 
 .result__video-container {
@@ -113,23 +87,6 @@ ol {
   object-position: center;
 }
 
-.content__video-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-}
-
-.content__video-card-thumbnail {
-  min-width: 194px;
-  height: 103px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.content__video-card-description-container {
-  width: 191px;
-}
-
 .search-form {
   display: flex;
   justify-content: space-between;
@@ -137,51 +94,10 @@ ol {
 }
 
 .search-form__fieldset-title {
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   color: #fff;
   font-weight: 400;
   font-size: 18px;
-}
-
-.content__accent {
-  color: #545050;
-}
-
-.content__card-link {
-  color: #fff;
-  text-decoration: none;
-}
-
-.content__video-card-title {
-  overflow: hidden;
-  color: #fff;
-  font-family: "Oswald", sans-serif;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 100%;
-  text-transform: uppercase;
-  text-transform: uppercase;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.content__video-card-description {
-  display: -webkit-box;
-  margin-top: 5px;
-  overflow: hidden;
-  line-height: 90%;
-  -webkit-box-orient: vertical;
-  line-clamp: 3;
-}
-
-.visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  inline-size: 1px;
-  block-size: 1px;
-  clip-path: inset(50%);
-  white-space: nowrap;
 }
 
 .search-form__checkbox-list {
@@ -213,8 +129,9 @@ ol {
   border-left: none;
   padding: 2px;
   color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   background-color: transparent;
   appearance: none;
 }
@@ -254,9 +171,11 @@ ol {
 }
 
 .button {
+
   border: 1px solid #fff;
   color: #fff;
   font-weight: 700;
+  font-family:'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   text-align: center;
   background-color: transparent;
@@ -291,8 +210,93 @@ ol {
   outline-offset: -3px;
 }
 
+.title {
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__list-container {
+  position: relative;
+  height: 298px;
+  overflow: auto;
+}
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.content__list-item {
+  padding: 3px;
+}
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.content__video-card-thumbnail {
+  min-width: 194px;
+  height: 103px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__video-card-description-container {
+  width: 191px;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.content__video-card-title {
+  overflow: hidden;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.content__video-card-description {
+  display: -webkit-box;
+  overflow: hidden;
+  line-height: 90%;
+  margin-top: 5px;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+}
+
 .content__card-link {
   display: block;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link:active {
